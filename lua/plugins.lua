@@ -14,11 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 
 --plugins
 local plugins = {
-   {"catppuccin/nvim", name = "catppuccin", priority = 1000 },
-   {'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim' }}
+    {"catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim' }},
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        dependencies = {"nvim-tree/nvim-web-devicons"},
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
 }
 
-local opts = {}
-
-require("lazy").setup(plugins,opts)
-
+require("lazy").setup(plugins)
