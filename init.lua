@@ -6,4 +6,6 @@ require('plugins')
 require("colorscheme")
 
 -- plugins
-require("telescope")
+require("plugins.telescope")
+require("plugins.cord")
+require("plugins.nvim-tree")
