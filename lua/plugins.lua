@@ -18,7 +18,8 @@ local plugins = {
     {'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim' }},
     { "kyazdani42/nvim-tree.lua", event = "VimEnter", dependencies = "nvim-tree/nvim-web-devicons" },
 
-    {'vyfor/cord.nvim',build = '.\\build',event = 'VeryLazy',opts = {},}
+    {'vyfor/cord.nvim',build = '.\\build',event = 'VeryLazy',opts = {},},
+    {"williamboman/mason.nvim"}
 }
 
 require("lazy").setup(plugins)
